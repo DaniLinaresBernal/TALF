@@ -1,0 +1,50 @@
+\documentclass[11pt]{article}
+    \title{\textbf{Práctica 4}}
+    \author{Daniel Linares Bernal}
+    \date{24/12/2022}
+    
+    \addtolength{\topmargin}{-3cm}
+    \addtolength{\textheight}{3cm}
+\usepackage[utf8]{inputenc}
+\begin{document}
+
+\maketitle
+
+\section{Codigo WHILE para computar la funcion $diverge$}
+
+La secuencia de instrucciones del programa sería la siguiente:
+
+X1 := X1 + 1 ;
+
+while X1 != 0 do
+
+X1 := X1
+
+od
+\section{Script de Octave que enumere todos los vectores}
+\begin{verbatim}
+n = 3;
+count = 1;\
+for i = 1:2^n\
+  	binary = dec2bin(i-1,n);\
+  	fprintf('Vector --d: [', count);\
+  	for j = 1:n\
+    	fprintf('%d', str2num(binary(j)));\
+    	if j < n\
+    		fprintf(', ');\
+    	endif\
+  	endfor\
+  	fprintf('n');\
+  	count = count + 1;\
+endfor
+\end{verbatim}
+\section{Script de Octave que enumere todos los programas WHILE}
+\begin{verbatim}
+program_list = {"program1", "program2", "program3"};\
+i = 1;\
+while i <= length(program_list)\
+  disp(program_list{i});\
+  i = i + 1; \
+end
+\end{verbatim}
+\end{document}
